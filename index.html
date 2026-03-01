@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title>Sweet Bakery - Tiệm Bánh Ngọt</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet bakery - Trang chủ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>🍰 Sweet Bakery</h1>
-        <nav>
-            <a href="index.html">Trang Chủ</a>
-            <a href="gioithieu.html">Giới Thiệu</a>
-            <a href="lienhe.html">Liên Hệ</a>
-        </nav>
-    </header>
+<header class="header">
+  <div class="container header-wrap">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>SWEET BAKERY</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Trang chủ</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <h2>Thế Giới Bánh Kẹo Ngọt Ngào</h2>
-        <p>Bánh tươi mỗi ngày - Ngọt ngào từng khoảnh khắc</p>
-        <a href="lienhe.html"><button>ĐẶT NGAY</button></a>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="products" id="products">
-        <h2>🍩 Sản Phẩm Nổi Bật</h2>
-        <div class="product-container">
-
-            <div class="card">
-                <img src="images\banhkemdau.jpg">
-                <h3>Bánh Kem Dâu</h3>
-                <p>120.000đ</p>
-                <a href="banhkemdau.html" ><button>Xem</button></a>
-            </div>
-
-            <div class="card">
-                <img src="images\donut.jpg">
-                <h3>Donut Socola</h3>
-                <p>35.000đ</p>
-                <a href="donutsocola.html" ><button>Xem</button></a>
-            </div>
-
-            <div class="card">
-                <img src="images\macaron.jpg">
-                <h3>Bánh Macaron</h3>
-                <p>50.000đ</p>
-                <a href="banhmacaron.html" ><button>Xem</button></a>
-            </div>
-
+<section class="hero">
+  <div class="container hero-wrap">
+    <div class="hero-main">
+      <div class="hero-img">
+        <!-- Đổi ảnh theo ý bạn: images/hero-cake.jpg -->
+        <img src="images/hero-cake.jpg" alt="Sweet bakery">
+      </div>
+      <div class="hero-content">
+        <div class="kicker">Ngọt ngào • Dễ thương • Tươi mỗi ngày</div>
+        <h1>Tiệm bánh hồng “Sweet bakery”</h1>
+        <p>
+          Sweet bakery mang đến bánh ngọt tươi mới: mềm xốp, thơm bơ sữa,
+          topping trái cây và kem mịn. Phù hợp sinh nhật, họp nhóm, hoặc tự thưởng bản thân.
+        </p>
+        <div style="margin-top:12px">
+          <a class="btn" href="menu.html">Xem Menu</a>
         </div>
+      </div>
+    </div>
 
+    <aside class="hero-side">
+      <div class="badge"><span class="glow"></span> Ưu đãi hôm nay</div>
+      <ul class="list">
+        <li>Giảm 10% cho đơn từ 2 bánh trở lên</li>
+        <li>Bánh làm trong ngày, nhận đặt trước</li>
+        <li>Trang trí theo yêu cầu (tên, nến, hoa quả)</li>
+      </ul>
+
+      <div class="box" style="margin-top:14px">
+        <b>⏰ Giờ mở cửa:</b> 8:00 – 21:00<br/>
+        <b>☎️ Hotline:</b> 0900 888 777<br/>
+        <b>📍 Địa chỉ:</b> ( 665-667-669 Điện Biên Phủ)
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Giới thiệu chung</h2>
+    <p class="lead">
+      Bánh của Sweet bakery tập trung vào 3 yếu tố: cốt bánh mềm xốp – kem mịn vừa ngọt –
+      topping tươi (dâu, nho, việt quất…) giúp vị cân bằng, không ngấy.
+    </p>
+
+    <div class="grid">
+      <div class="box"><b>🍰 Cốt bánh</b><br/>Mềm, thơm vani/bơ sữa.</div>
+      <div class="box"><b>🥛 Kem</b><br/>Mịn, ít ngọt, dễ ăn.</div>
+      <div class="box"><b>🍓 Topping</b><br/>Trái cây & chocolate.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">© Sweet bakery </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>

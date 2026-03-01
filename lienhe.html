@@ -1,34 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<title>Liên hệ</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet bakery - Liên hệ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <nav>
-    <a href="index.html">Trang Chủ</a>
+
+<header class="header">
+  <div class="container header-wrap">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>SWEET BAKERY</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Trang chủ</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Liên hệ</a>
     </nav>
+  </div>
+</header>
 
- <section class="contact" id="contact">
-        <h2>📩 Liên Hệ Đặt Bánh</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Tên của bạn" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Nội dung" required></textarea>
-            <button type="submit">Gửi</button>
-        </form>
-    </section>
+<section class="section">
+  <div class="container">
+    <h2>Thông tin & đặt bánh</h2>
+    <p class="lead">Điền form để đặt bánh . Bạn hãy ghi chú: vị/size/trang trí.</p>
 
-    <footer>
-        <p>© Sweet Bakery</p>
-    </footer>
+    <div class="grid">
+      <div class="box">
+        <b>📍 Địa chỉ</b><br/>
+        <span style="color:rgba(59,28,45,.78)">(665-667-669 Điện Biên Phủ)</span>
+      </div>
+      <div class="box">
+        <b>⏰ Giờ mở cửa</b><br/>
+        <span style="color:rgba(59,28,45,.78)">8:00 – 21:00 (mỗi ngày)</span>
+      </div>
+      <div class="box">
+        <b>☎️ Liên hệ</b><br/>
+        <span style="color:rgba(59,28,45,.78)">0900 888 777 • Facebook/Instagram</span>
+      </div>
+    </div>
 
+    <div class="box" style="margin-top:16px">
+      <h3 style="margin:0 0 10px">Form đặt bánh (demo)</h3>
+      <form id="orderForm" style="display:grid; gap:10px; max-width:720px">
+        <input id="name" required placeholder="Họ và tên">
+        <input id="phone" required placeholder="Số điện thoại">
+        <input id="address" required placeholder="Địa chỉ nhận hàng">
+        <textarea id="note" rows="3" placeholder="Ghi chú"></textarea>
+        <button class="btn" type="submit">Gửi yêu cầu</button>
+        <div id="msg" style="font-weight:800; color:rgba(59,28,45,.9)"></div>
+      </form>
+    </div>
+  </div>
+</section>
 
+<footer class="footer">
+  <div class="container">© Sweet bakery</div>
+</footer>
 
-<script src="js/script.js"></script>
-
+<script src="app.js"></script>
+<script>
+  document.getElementById("orderForm").addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const note = document.getElementById("note").value.trim();
+    document.getElementById("msg").textContent =
+      `✅ Đã nhận yêu cầu (demo) của ${name} • ${phone} • ${address}` + (note ? ` • Ghi chú: ${note}` : "");
+    e.target.reset();
+  });
+</script>
 </body>
 </html>
-
-
